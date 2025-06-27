@@ -190,7 +190,10 @@ typedef struct
         __IO uint8_t  D8_DATA_REG2; // RW/RW, data buffer 2
         __IO uint8_t  D8_DATA_REG3; // RW/RW, data buffer 3
       } ;
-      __IO uint16_t   D16_DATA_REG0_1 ; // RW/RW, data buffer 0~1
+      struct {
+        __IO uint16_t D16_DATA_REG0_1 ; // RW/RW, data buffer 0~1
+        __IO uint16_t D16_DATA_REG2_3 ; // RW/RW, data buffer 2~3
+      } ;
     } ;
     union {
       __IO uint32_t   D32_DATA_REG4_7 ; // RW/RW, data buffer 4~7
